@@ -78,3 +78,7 @@ output "service_account_id" {
   description = "Service account id and email"
   value       = local.service_account_output
 }
+
+output "serverless_neg_required_input" {
+  value = { region: google_cloud_run_v2_service.main.location, type: "cloud-run", service: { name: google_cloud_run_v2_service.main.name}}
+}
