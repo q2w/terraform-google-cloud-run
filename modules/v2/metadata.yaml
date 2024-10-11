@@ -22,7 +22,7 @@ spec:
   info:
     title: Cloud Run v2 Service
     source:
-      repo: https://github.com/GoogleCloudPlatform/terraform-google-cloud-run.git
+      repo: https://github.com/q2w/terraform-google-cloud-run.git
       sourceType: git
       dir: /modules/v2
     version: 0.13.0
@@ -137,7 +137,7 @@ spec:
             })
         connections:
           - source:
-              source: github.com/terraform-google-modules/terraform-google-network//modules/vpc-serverless-connector-beta
+              source: github.com/q2w/terraform-google-network//modules/vpc-serverless-connector-beta
               version: ">= 9.1.0"
             spec:
               outputExpr: connector_ids
@@ -158,7 +158,7 @@ spec:
         varType: string
         connections:
           - source:
-              source: github.com/terraform-google-modules/terraform-google-service-accounts//modules/simple-sa
+              source: github.com/q2w/terraform-google-service-accounts//modules/simple-sa
               version: ">= 4.3.0"
             spec:
               outputExpr: email
@@ -209,19 +209,19 @@ spec:
         defaultValue: []
         connections:
           - source:
-              source: github.com/terraform-google-modules/terraform-google-sql-db//modules/postgresql
+              source: github.com/q2w/terraform-google-sql-db//modules/postgresql
               version: ">= 21.0.0"
             spec:
               outputExpr: instance_connection_name
               inputPath: cloud_sql_instance.instances
           - source:
-              source: github.com/terraform-google-modules/terraform-google-sql-db//modules/mysql
+              source: github.com/q2w/terraform-google-sql-db//modules/mysql
               version: ">= 22.0.0"
             spec:
               outputExpr: instance_connection_name
               inputPath: cloud_sql_instance.instances
           - source:
-              source: github.com/terraform-google-modules/terraform-google-cloud-storage//modules/simple_bucket
+              source: github.com/q2w/terraform-google-cloud-storage//modules/simple_bucket
               version: ">= 6.1.0"
             spec:
               outputExpr: name
@@ -300,31 +300,31 @@ spec:
         required: true
         connections:
           - source:
-              source: github.com/terraform-google-modules/terraform-google-memorystore
+              source: github.com/q2w/terraform-google-memorystore
               version: ">= 10.0.0"
             spec:
               outputExpr: env_vars
               inputPath: env_vars
           - source:
-              source: github.com/terraform-google-modules/terraform-google-sql-db//modules/postgresql
+              source: github.com/q2w/terraform-google-sql-db//modules/postgresql
               version: ">= 21.0.0"
             spec:
               outputExpr: env_vars
               inputPath: env_vars
           - source:
-              source: github.com/terraform-google-modules/terraform-google-sql-db//modules/mysql
+              source: github.com/q2w/terraform-google-sql-db//modules/mysql
               version: ">= 22.0.0"
             spec:
               outputExpr: env_vars
               inputPath: env_vars
           - source:
-              source: github.com/terraform-google-modules/terraform-google-service-accounts//modules/simple-sa
+              source: github.com/q2w/terraform-google-service-accounts//modules/simple-sa
               version: ">= 4.3.0"
             spec:
               outputExpr: env_vars
               inputPath: env_vars
           - source:
-              source: github.com/GoogleCloudPlatform/terraform-google-cloud-run//modules/v2
+              source: github.com/q2w/terraform-google-cloud-run//modules/v2
               version: ">= 0.12.0"
             spec:
               outputExpr: '{"SERVICE_ENDPOINT": service_uri}'
