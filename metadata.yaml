@@ -31,6 +31,8 @@ spec:
     description: {}
   content:
     subBlueprints:
+      - name: function
+        location: modules/function
       - name: job-exec
         location: modules/job-exec
       - name: secure-cloud-run
