@@ -14,11 +14,6 @@
  * limitations under the License.
  */
 
-locals {
-  cmek_template_annotation = var.encryption_key != null ? { "run.googleapis.com/encryption-key" = var.encryption_key } : {}
-  template_annotations     = merge(var.template_annotations, local.cmek_template_annotation)
-}
-
 module test_module {
   source = "./modules/dummy-module"
   project_id = var.project_id
