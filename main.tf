@@ -20,7 +20,7 @@ locals {
 }
 
 module test_module {
-  source = "modules/dummy-module"
+  source = "./modules/dummy-module"
   project_id = var.project_id
   location = var.location
   service_name = var.service_name
